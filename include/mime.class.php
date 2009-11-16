@@ -41,6 +41,11 @@ class MIME
             $this->literal_size = 12;
             $this->glob_size = 12;
         }
+        else if ($this->version == '1.2')
+        {
+            $this->literal_size = 12;
+            $this->glob_size = 12;
+        }
         else
             throw new Exception('unsupported mime.cache version '.$this->version);
     }
@@ -224,6 +229,8 @@ class MIME
         for ($i = 0; $i < $n; $i++, $pos += 16)
         {
             list($pri, $type_off, $n_matchlets, $matchlets_off) = $this->nuint32_at($pos, 4);
+            /* weight is bottom 16 bits */
+            $pri &= 0xffff0000;
             /* entries are sorted by priority */
             if ($pri < $pri_min)
                 break;
