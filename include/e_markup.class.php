@@ -271,6 +271,11 @@ abstract class eMarkup
         {
             return $this->fmt_code($this->fmt_plain($in));
         }
+        /* recognize ; comment from ledger*/
+        if (substr($in, 0, 2) == '; ')
+        {
+            return $this->fmt_code($this->fmt_plain($in));
+        }
 
         $lines = explode("\n", $in);
         $lines = array_map('trim', $lines);
