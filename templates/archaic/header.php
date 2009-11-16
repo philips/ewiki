@@ -4,8 +4,14 @@
 <head>
 <title><?= Config::WIKI_NAME ?>: <?= Markup::escape($title) ?></title>
 <link rel="stylesheet" href="<?= Config::PATH . '/templates/' . Config::TEMPLATE . '/style.css' ?>" />
+<link rel="stylesheet" href="<?= Config::PATH . '/templates/' . Config::TEMPLATE . '/uvumi-textarea.css' ?>" />
 <script type="text/javascript" src="<?= Config::PATH ?>/mootools-1.2-core-nc.js"></script>
 <script type="text/javascript" src="<?= Config::PATH ?>/templates/<?= Config::TEMPLATE ?>/site.js"></script>
+<script type="text/javascript" src="<?= Config::PATH ?>/templates/<?= Config::TEMPLATE ?>/UvumiTextarea.js"></script>
+<script type="text/javascript">
+new UvumiTextarea({selector:'textarea#content',maxChar:0});
+//new UvumiTextarea();
+</script>
 <meta name="date" content="<?= date('r', (isset($page) ? $page->getLastModified() : time())) ?>" />
 <? if (isset($page)): ?>
 <? if ($action == 'edit'): ?>

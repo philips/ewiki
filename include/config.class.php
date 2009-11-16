@@ -1,18 +1,17 @@
 <?php
-
 final class Config
 {
     // The name of the wiki
-    const WIKI_NAME = 'eWiki';
+    const WIKI_NAME = 'NishaBrandon ledger wiki';
 
     // The path of the wiki relative to the web root (no trailing slash)
-    const PATH = '';
+    const PATH = '/ledger';
 
     // The template for the wiki (see templates/)
     const TEMPLATE = 'archaic';
 
     // The path to the git repository
-    const GIT_PATH = '/srv/git/wiki.git';
+    const GIT_PATH = '/data/www/ledger.git';
 
     // The branch that should be used
     const GIT_BRANCH = 'master';
@@ -30,7 +29,7 @@ final class Config
     const LOCALE = 'en_US.UTF-8';
 
     // The time zone of the wiki
-    const TIMEZONE = 'GMT';
+    const TIMEZONE = 'America/Los_Angeles';
 
     // The default maximum image width
     const IMAGE_WIDTH = 640;
