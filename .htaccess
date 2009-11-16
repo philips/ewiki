@@ -1,6 +1,4 @@
-
 RewriteEngine On
-RewriteBase /
+RewriteBase /ledger
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php
-

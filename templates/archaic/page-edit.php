@@ -35,7 +35,7 @@
     </label>
 
     <div id="page-opt-target">
-        <textarea name="content" rows="30" cols="80"><?= Markup::escape($content) ?></textarea>
+        <textarea id="content" name="content" cols="80"><?= Markup::escape($content) ?></textarea>
     </div>
 </div>
 
